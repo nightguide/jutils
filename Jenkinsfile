@@ -9,7 +9,7 @@ pipeline {
       agent {
         docker {
           image 'maven:3.5.0'
-          args '-v $HOME:/root/.m2'
+          args '-v ${HOME}:/root/.m2'
         }
       }
       
