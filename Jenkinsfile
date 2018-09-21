@@ -20,7 +20,6 @@ pipeline {
     }
     
       stage('Unit Tests') {
-      agent any
       steps {
        junit 'target/surefire-reports/*.xml'
  
