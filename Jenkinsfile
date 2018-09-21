@@ -1,6 +1,4 @@
 #!groovy
-
-
   
 pipeline {
   agent { label 'jenkins-slave' }
@@ -9,7 +7,7 @@ pipeline {
       agent {
         docker {
           image 'maven:3.5.0'
-        
+		  reuseNode true
         }
       }
       
@@ -41,4 +39,5 @@ post {
     }     
  }
 }
+
 
